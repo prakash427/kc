@@ -29,27 +29,30 @@ import Fans from '../fans';
 import Charity from '../charity';
 import Media from '../media';
 import Family from '../family';
+import StreamingRecords from '../streamingrecordsscreen';
 
 
 const Tab = createBottomTabNavigator();
 
 const AnimatedSvg = Animated.createAnimatedComponent(Svg);
 
-const StackK = () => {
+const StackK = ({ route }) => {
   return (
     <>
       <StatusBar barStyle="light-content" />
       {/* <NavigationContainer> */}
         <Tab.Navigator tabBar={(props) => <AnimatedTabBar {...props} />}>
-          <Tab.Screen
-            name="Homescreen"
-            component={Homescreen}
-            options={{
-              tabBarIcon: ({ color, size }) => <Octicons name="home" size={23} color={'#ffffff'} />,
-              tabBarLabel: 'Home',
-              headerShown: false
-            }}
-          />
+            <Tab.Screen
+              name="Homescreen"
+              component={Homescreen}
+              options={{
+                tabBarIcon: ({ color, size }) => (
+                  <Octicons name="home" size={23} color={'#ffffff'} />
+                ),
+                tabBarLabel: 'Home',
+                headerShown: false,
+              }}
+            />
           <Tab.Screen
             name="Fans"
             component={Fans}
@@ -252,7 +255,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     flex: 1,
     borderRadius: 20,
-    //alignSelf:'center',  
     height: 40,
     left: 10,
     width: 40,

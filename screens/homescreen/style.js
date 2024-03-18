@@ -108,7 +108,35 @@ const styles = StyleSheet.create({
     newstext : {
         color:'#000000',
         fontSize : 9
-    }
+    },
+    media_container: {
+        flex: 1,
+        height: '100%',
+        width: '100%',
+        alignItems: 'center'
+      },
+      container: {
+        //alignItems: 'center',
+      },
+      shareText : {
+        color : '#000000',
+        fontSize : 14,
+        fontWeight : 'bold'
+      },
+      header : {
+        backgroundColor : '#005575',
+        width : '100%',
+        flexDirection : 'row',
+        gap : 10,
+        padding : 15,
+        borderBottomRightRadius : 20,
+        borderBottomLeftRadius : 20
+      },
+      streamingtext : {
+        color : '#ffffff',
+        fontWeight : '500',
+        fontSize  : 20
+      }
 })
 
 export default styles;

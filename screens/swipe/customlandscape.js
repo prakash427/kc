@@ -18,7 +18,7 @@ const CustomImageCarousal = ({data, autoPlay, pagination}) => {
     {key: 'spacer-right'},
   ]);
   const {width} = useWindowDimensions();
-  const SIZE = width * 0.7;
+  const SIZE = width * 0.54;
   const SPACER = (width - SIZE) / 2;
   const x = useSharedValue(0);
   const offSet = useSharedValue(0);
@@ -101,7 +101,8 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: undefined,
-    aspectRatio: 14/10,
+    height: 130,
+    resizeMode : 'contain',
+    aspectRatio: 10/6.1,
   },
 });

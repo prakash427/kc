@@ -15,7 +15,7 @@ const Slides = () => {
       image: require('../../assets/image-product-1.jpg'),
     },
     {
-      image: require('../../assets/as.png'),
+      image: require('../../assets/viswam.png'),
     },
     {
       image: require('../../assets/mega1.png'),
