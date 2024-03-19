@@ -14,12 +14,14 @@ import MoviesdisplayScreen from "../moviesscreen";
 import NewsScreen from "../news";
 import EventScreen from "../eventsscreen";
 import GalleryScreen from "../gallery";
+import CustomModal from "../../components/CustomModal";
 import Newspage from "../newspage";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 
 const width = Dimensions.get('window').width;
 const Homescreen = () => {
+    const [visible, setVisible ] = useState(false);
     const [streaming, setStreaming] = useState(false)
     const[dialogues, setDialogues] = useState(false)
     const[moviesupdate,setMoviesupdate] = useState(false)
@@ -78,7 +80,7 @@ const Homescreen = () => {
         return (
             <LinearGradient
                 style={styles.container}
-                colors={['#290334', '#845257']}
+                colors={['#E1F6FF', '#91E0FF']}
                 start={{ x: 1, y: 0 }}
                 end={{ x: 1, y: 1 }}
             >
@@ -95,10 +97,10 @@ const Homescreen = () => {
                                             <Feather name="search" size={26} color='black' />
                                         </TouchableOpacity>
                                         <TouchableOpacity>
-                                            <MaterialCommunityIcons name="message-text-outline" size={22} color='#F16623' />
+                                            <MaterialCommunityIcons name="message-text-outline" size={22} color='#005575' />
                                         </TouchableOpacity>
                                         <TouchableOpacity>
-                                            <Ionicons name="notifications-outline" size={22} color='#F16623' />
+                                            <Ionicons name="notifications-outline" size={22} color='#005575' />
                                         </TouchableOpacity>
                                     </View>
                                 </View>
@@ -153,7 +155,7 @@ const Homescreen = () => {
                                 ></LinearGradient>
                             </View>
                             <View style={styles.messages}>
-                                <TouchableOpacity style={[styles.st, { borderTopLeftRadius: 15, borderBottomLeftRadius: 15, }]}>
+                                <TouchableOpacity onPress={() => setVisible(true)} style={[styles.st, { borderTopLeftRadius: 15, borderBottomLeftRadius: 15, }]}>
                                     <View>
                                         <Text style={styles.messagetype}>Text</Text>
                                         <View style={{ flexDirection: 'row', gap: 4 }}>
@@ -190,6 +192,7 @@ const Homescreen = () => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
+                            <CustomModal visible={visible} onClose={()=> setVisible(false)}/>
                             <View style={styles.message}>
                                 <Text style={styles.messagetext}>Live Stream</Text>
                                 <LinearGradient

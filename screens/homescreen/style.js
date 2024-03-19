@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     content: {
-        marginBottom : 100
+        marginBottom: 100
     },
     searchbar: {
         backgroundColor: '#ffffff',
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         height: 60,
         borderRadius: 15,
         borderWidth: 1,
-        borderColor: '#F16623',
+        borderColor: '#005575',
     },
     searchbarcontent: {
         margin: 15,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         borderRadius: 5
     },
     text: {
-        color: '#F16623'
+        color: '#005575'
     },
     stories: {
         padding: 5,
@@ -49,8 +49,9 @@ const styles = StyleSheet.create({
     },
     storytext: {
         textAlign: 'center',
-        color: 'white',
-        fontSize: 10
+        color: '#000',
+        fontSize: 10,
+        fontWeight: '600'
     },
     storyimage: {
         alignSelf: 'center',
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     messagetext: {
         fontFamily: 'Inter',
         fontWeight: '700',
-        color: '#ffffff',
+        color: '#000000',
         fontSize: 20,
         paddingBottom: 3
     },
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         height: 113,
         borderWidth: 1,
-        borderColor: '#F16623',
+        borderColor: '#005575',
         padding: 12,
         justifyContent: 'center'
     },
@@ -98,45 +99,17 @@ const styles = StyleSheet.create({
         width: '100%',
         borderRadius: 10
     },
-    newsTextContainer : {
-        backgroundColor : '#ffffff',
-        width  :150,
-        height  :48,
-        alignItems : 'center',
-        justifyContent  :'center'
+    newsTextContainer: {
+        backgroundColor: '#ffffff',
+        width: 150,
+        height: 48,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
-    newstext : {
-        color:'#000000',
-        fontSize : 9
-    },
-    media_container: {
-        flex: 1,
-        height: '100%',
-        width: '100%',
-        alignItems: 'center'
-      },
-      container: {
-        //alignItems: 'center',
-      },
-      shareText : {
-        color : '#000000',
-        fontSize : 14,
-        fontWeight : 'bold'
-      },
-      header : {
-        backgroundColor : '#005575',
-        width : '100%',
-        flexDirection : 'row',
-        gap : 10,
-        padding : 15,
-        borderBottomRightRadius : 20,
-        borderBottomLeftRadius : 20
-      },
-      streamingtext : {
-        color : '#ffffff',
-        fontWeight : '500',
-        fontSize  : 20
-      }
+    newstext: {
+        color: '#000000',
+        fontSize: 9
+    }
 })
 
 export default styles;
