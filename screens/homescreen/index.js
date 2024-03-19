@@ -217,8 +217,8 @@ const Homescreen = () => {
                                 ></LinearGradient>
                             </View>
                             <TouchableOpacity style={{ flexDirection: 'row', gap: 2 }} onPress={() => { setStreaming(true)}}>
-                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#ffffff' }}>View More</Text>
-                                <AntDesign name={'right'} color={'#ffffff'} style={{ paddingTop: 6 }} />
+                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#000000' }}>View More</Text>
+                                <AntDesign name={'right'} color={'#000000'} style={{ paddingTop: 6 }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ marginLeft: 15 }}>
@@ -243,8 +243,8 @@ const Homescreen = () => {
                                 ></LinearGradient>
                             </View>
                             <TouchableOpacity style={{ flexDirection: 'row', gap: 2 }} onPress={()=>{setDialogues(true)}}>
-                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#ffffff' }}>View More</Text>
-                                <AntDesign name={'right'} color={'#ffffff'} style={{ paddingTop: 6 }} />
+                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#000000' }}>View More</Text>
+                                <AntDesign name={'right'} color={'#000000'} style={{ paddingTop: 6 }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: 10, marginLeft: 15, marginRight: 15 }}>
@@ -276,8 +276,8 @@ const Homescreen = () => {
                                 ></LinearGradient>
                             </View>
                             <TouchableOpacity style={{ flexDirection: 'row', gap: 2 }} onPress={()=>{setMoviesupdate(true)}}>
-                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#ffffff' }}>View More</Text>
-                                <AntDesign name={'right'} color={'#ffffff'} style={{ paddingTop: 6 }} />
+                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#000000' }}>View More</Text>
+                                <AntDesign name={'right'} color={'#000000'} style={{ paddingTop: 6 }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ marginLeft: 15 }}>
@@ -302,8 +302,8 @@ const Homescreen = () => {
                                 ></LinearGradient>
                             </View>
                             <TouchableOpacity style={{ flexDirection: 'row', gap: 2 }} onPress={()=>{setNews(true)}}>
-                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#ffffff' }}>View More</Text>
-                                <AntDesign name={'right'} color={'#ffffff'} style={{ paddingTop: 6 }} />
+                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#000000' }}>View More</Text>
+                                <AntDesign name={'right'} color={'#000000'} style={{ paddingTop: 6 }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ marginLeft: 15 }}>
@@ -328,8 +328,8 @@ const Homescreen = () => {
                                 ></LinearGradient>
                             </View>
                             <TouchableOpacity style={{ flexDirection: 'row', gap: 2 }} onPress={()=>{setEvent(true)}}>
-                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#ffffff' }}>View More</Text>
-                                <AntDesign name={'right'} color={'#ffffff'} style={{ paddingTop: 6 }} />
+                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#000000' }}>View More</Text>
+                                <AntDesign name={'right'} color={'#000000'} style={{ paddingTop: 6 }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ margin: 0 }}>
@@ -346,8 +346,8 @@ const Homescreen = () => {
                                 ></LinearGradient>
                             </View>
                             <TouchableOpacity style={{ flexDirection: 'row', gap: 2 }} onPress={()=>{setGallery(true)}}>
-                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#ffffff' }}>View More</Text>
-                                <AntDesign name={'right'} color={'#ffffff'} style={{ paddingTop: 6 }} />
+                                <Text style={{ fontFamily: 'Inter', fontSize: 14, color: '#000000' }}>View More</Text>
+                                <AntDesign name={'right'} color={'#000000'} style={{ paddingTop: 6 }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ flexDirection: 'column', marginLeft: 10, marginRight: 10, gap: 10 }}>

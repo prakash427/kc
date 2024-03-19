@@ -4,12 +4,12 @@ import LinearGradient from 'react-native-linear-gradient'
 
 const width = Dimensions.get('window').width;
 
-const Charity = () => {
+const Charity = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <Image source={require('../../assets/charity1.png')} style={styles.charity1_image} resizeMode='cover'/>
       <LinearGradient 
-        colors={['#290334', '#845257']}
+        colors={['#E1F6FF', '#91E0FF']}
         style={styles.charity_container}
       >
       <Text style={styles.charity_text}>CHIRANJEEVI CHARITABLE TRUST</Text>
@@ -25,7 +25,7 @@ const Charity = () => {
           in the Telugu states to provide people with oxygen to enable them to battle the pandemic. 
     </Text>
     <Text style={styles.register_text}>Register to</Text>
-    <TouchableOpacity style={styles.donate_btn}>
+    <TouchableOpacity style={styles.donate_btn} onPress={() => navigation.navigate('RegisterToDonate')}>
       <Text style={styles.donate_text}>Donate Blood</Text>
     </TouchableOpacity>
     
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     padding: 30
   },
   charity_text: {
-    color: '#f16623',
+    color: '#005575',
     fontSize: 18,
     fontFamily: 'Poppins',
     fontWeight: 'bold',
@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
   },
   charity_desc: {
     fontSize: 14,
-    color: '#fff',
+    color: '#000',
     marginBottom: 20
   },
   donate_btn: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f16623',
+    backgroundColor: '#000000',
     width: '70%',
     height: 45,
     marginTop: 30,
@@ -85,6 +85,6 @@ const styles = StyleSheet.create({
   },
   register_text: {
     fontSize: 20,
-    color: '#fff'
+    color: '#000'
   }
 })

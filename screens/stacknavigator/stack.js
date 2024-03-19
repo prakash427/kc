@@ -26,9 +26,9 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Homescreen from '../homescreen';
 import Fans from '../fans';
-import Charity from '../charity';
+import { CharityStack } from './CharityStack';
 import Media from '../media';
-import Family from '../family';
+import { FamilyStack } from './FamilyStack';
 import StreamingRecords from '../streamingrecordsscreen';
 
 
@@ -67,8 +67,8 @@ const StackK = ({ route }) => {
             }}
           />
           <Tab.Screen
-            name="Charity"
-            component={Charity}
+            name="CharityStack"
+            component={CharityStack}
             options={{
               tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name='hand-heart-outline' size={23} color={'#ffffff'} />,
               tabBarLabel: 'Charity',
@@ -89,8 +89,8 @@ const StackK = ({ route }) => {
             }}
           />
           <Tab.Screen
-            name="Family"
-            component={Family}
+            name="FamilyStack"
+            component={FamilyStack}
             options={{
               tabBarIcon: ({ color, size }) => <MaterialIcons name='family-restroom' size={23} color={'#ffffff'} />,
               tabBarLabel: 'Family',
