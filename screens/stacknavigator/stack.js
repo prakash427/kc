@@ -63,7 +63,7 @@ const StackK = ({ route }) => {
               title: 'My Messages',
               headerTitleStyle: { color: '#fff' },
               headerTitleAlign: 'center',
-              headerBackgroundContainerStyle: { backgroundColor: '#290334' }
+              headerBackgroundContainerStyle: { backgroundColor: '#E1F6FF' }
             }}
           />
           <Tab.Screen
@@ -85,7 +85,7 @@ const StackK = ({ route }) => {
               title: 'Media',
               headerTitleStyle: { color: '#fff' },
               headerTitleAlign: 'center',
-              headerBackgroundContainerStyle: { backgroundColor: '#290334' }
+              headerBackgroundContainerStyle: { backgroundColor: '##E1F6FF' }
             }}
           />
           <Tab.Screen
@@ -98,7 +98,7 @@ const StackK = ({ route }) => {
               title: 'Family',
               headerTitleStyle: { color: '#fff' },
               headerTitleAlign: 'center',
-              headerBackgroundContainerStyle: { backgroundColor: '#290334' }
+              headerBackgroundContainerStyle: { backgroundColor: '##E1F6FF' }
             }}
           />
         </Tab.Navigator>
@@ -148,7 +148,7 @@ const AnimatedTabBar = ({
           style={[styles.activeBackground, animatedStyles]}
         >
           <Path
-            fill="#7D4D53"
+            fill="#91E0FF"
             d="M108.603 35C85.4487 35 83.7949 77.5 54.5769 77.5C25.359 77.5 18.7436 35 0 35C0 15.67 33.2644 0 54.5769 0C75.8895 0 108.603 15.67 108.603 35Z"
           />
         </AnimatedSvg>
@@ -223,7 +223,7 @@ const TabBarComponent = ({ active, options, onLayout, onPress }) => {
 const styles = StyleSheet.create({
   tabBar: {
     position: 'absolute',
-    backgroundColor: '#f16623',
+    backgroundColor: '#005575',
     borderTopWidth: 0,
     bottom: 0,
     height: 75,
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     height: 40,
     left: 10,
     width: 40,
-    backgroundColor: '#f16623',
+    backgroundColor: '#005575',
     bottom: 50,
   },
   iconContainer: {
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerStyle: {
-    backgroundColor: '#f16623',
+    backgroundColor: '#005575',
     borderBottomRightRadius: 20,
     borderBottomLeftRadius: 20
   }

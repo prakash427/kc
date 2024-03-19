@@ -3,21 +3,26 @@ import React, {useState} from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import CountryPicker, { Country } from 'react-native-country-picker-modal';
+import {Picker} from '@react-native-picker/picker';
 
 const width = Dimensions.get('window').width;
 
 const Signup = ({navigation}) => {
     const [name, setName] = useState('');
     const [dob, setDob] = useState('');
-    const [country, setCountry] = useState('');
+    const [selectedCountry, setSelectedCountry] = useState('IN');
     const [phone, setPhone] = useState('');
     const [gender, setGender] = useState('');
     const [anniversary, setAnniversary] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+
+    const handleCountrySelect = (country) => {
+      setSelectedCountry(country.cca2);
+    };
   
     const toggleShowPassword = () => {
       setShowPassword(!showPassword);
@@ -30,83 +35,95 @@ const Signup = ({navigation}) => {
     const handleSignupClick = () => {
        navigation.navigate('LanguageScreen');
     }
+
+    const anniversaryOptions = [
+      'Birthday',
+      'Anniversary',
+      'Function',
+      // Add more options as needed
+    ];  
   
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar hidden/>
         <Image source={require('../../assets/chiru_signup.png')} style={styles.signup_image} resizeMode='cover'/>
         <LinearGradient 
-          colors={['#290334', '#845257']}
+          colors={['#E1F6FF', '#91E0FF']}
           style={styles.login_container}
         >
         <Text style={styles.chiru_text}>Create An Account</Text>
         <View style={styles.input_container}>
-        <MaterialCommunityIcons name="account-outline" size={20} color="#fff" style={styles.icon} />
+        <MaterialCommunityIcons name="account-outline" size={20} color="#000" style={styles.icon} />
         <TextInput
           style={styles.input}
           placeholder='Name'
-          placeholderTextColor='#fff'
+          placeholderTextColor='#000'
           onChangeText={(text) => setName(text)}
           value={name}
         />
       </View>
         <View style={styles.input_container}>
-        <MaterialCommunityIcons name="calendar-blank-outline" size={20} color="#fff" style={styles.icon} />
+        <MaterialCommunityIcons name="calendar-blank-outline" size={20} color="#000" style={styles.icon} />
         <TextInput
           style={styles.input}
           placeholder='Date of Birth'
-          placeholderTextColor='#fff'
+          placeholderTextColor='#000'
           onChangeText={(text) => setDob(text)}
           value={dob}
         />
       </View>
-        <View style={styles.input_container}>
-        <FontAwesome name="user-o" size={20} color="#fff" style={styles.icon} />
-        <TextInput
-          style={styles.input}
-          placeholder='Country'
-          placeholderTextColor='#fff'
-          onChangeText={(text) => setCountry(text)}
-          value={country}
+        <View style={[styles.input_container, styles.countryInput]}>
+        <CountryPicker
+          countryCode={selectedCountry}
+          onSelect={handleCountrySelect}
+          withFilter={true}
+          withFlagButton={true}
+          withCountryNameButton
+          withAlphaFilter
+          withModal={true}
         />
       </View>
         <View style={styles.input_container}>
-        <Feather name="phone" size={20} color="#fff" style={styles.icon} />
+        <Feather name="phone" size={20} color="#000" style={styles.icon} />
         <TextInput
           style={styles.input}
           placeholder='Phone Number'
-          placeholderTextColor='#fff'
+          placeholderTextColor='#000'
           onChangeText={(text) => setPhone(text)}
           value={phone}
           keyboardType='number-pad'
         />
       </View>
         <View style={styles.input_container}>
-        <MaterialCommunityIcons name="gender-female" size={22} color="#fff" style={styles.icon} />
+        <MaterialCommunityIcons name="gender-female" size={22} color="#000" style={styles.icon} />
         <TextInput
           style={styles.input}
           placeholder='Gender'
-          placeholderTextColor='#fff'
+          placeholderTextColor='#000'
           onChangeText={(text) => setGender(text)}
           value={gender}
         />
       </View>
         <View style={styles.input_container}>
-        <Feather name="users" size={20} color="#fff" style={styles.icon} />
-        <TextInput
+        <Feather name="users" size={20} color="#000" style={styles.icon} />
+        <Picker
+          selectedValue={anniversary}
           style={styles.input}
-          placeholder='Anniversary'
-          placeholderTextColor='#fff'
-          onChangeText={(text) => setAnniversary(text)}
-          value={anniversary}
-        />
+          onValueChange={(itemValue, itemIndex) => setAnniversary(itemValue)}
+        >
+          <Picker.Item label="Select Anniversary" value="" />
+          {anniversaryOptions.map((option, index) => (
+            <Picker.Item key={index} label={option} value={option} />
+          ))}
+        </Picker>
+
       </View>
       <View style={styles.input_container}>
-        <Icon name="lock-outline" size={20} color="#fff" style={styles.icon} />
+        <Icon name="lock-outline" size={20} color="#000" style={styles.icon} />
         <TextInput
           style={styles.input}
           placeholder='Password'
-          placeholderTextColor='#fff'
+          placeholderTextColor='#000'
           onChangeText={(text) => setPassword(text)}
           value={password}
           secureTextEntry={!showPassword}
@@ -115,7 +132,7 @@ const Signup = ({navigation}) => {
           <Ionicons
             name={showPassword ? 'eye-off-outline' : 'eye-outline'}
             size={24}
-            color="#fff"
+            color="#000"
           />
         </TouchableOpacity>
       </View>
@@ -162,7 +179,7 @@ const Signup = ({navigation}) => {
       paddingHorizontal: 40
     },
     chiru_text: {
-      color: '#f16623',
+      color: '#000000',
       fontSize: 25,
       fontFamily: 'Poppins',
       fontWeight: 'bold',
@@ -177,8 +194,12 @@ const Signup = ({navigation}) => {
       flexDirection: 'row',
       alignItems: 'center',
       marginBottom: 10,
-      borderColor: '#fff',
-      borderBottomWidth: 1
+      borderColor: '#000',
+      borderBottomWidth: 1,
+      width: '100%'
+    },
+    countryInput: {
+      paddingVertical: 10
     },
     icon: {
       marginRight: 10,
@@ -186,7 +207,7 @@ const Signup = ({navigation}) => {
     signup_btn: {
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#f16623',
+      backgroundColor: '#000000',
       width: '70%',
       height: 45,
       borderRadius: 30,
@@ -200,11 +221,12 @@ const Signup = ({navigation}) => {
       flexDirection: 'row'
     },
     already_text: {
-      color: '#fff',
+      color: '#000',
       fontSize: 14,
     },
     login_text: {
-      color: '#f16623',
+      color: '#000',
+      fontWeight: 'bold'
     },
     login_btn: {
       marginLeft: 5

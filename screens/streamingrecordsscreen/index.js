@@ -83,13 +83,13 @@ const StreamingRecords = ({ updateStreaming,updateDialogue,updateMovies,updateNe
       </View>
       <View style={styles.container}>
         <FlatList
-          style={{ maxHeight: 640, padding: 10 }}
+          style={{ maxHeight: 630, padding: 10 }}
           data={movieImages}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
           numColumns={3}
         />
-        <View style={{ alignSelf: 'center' }}>
+        <View style={{ alignSelf: 'center', paddingTop : 9 }}>
           <View style={{ flexDirection: 'row', gap: 5 }}>
             <Text style={styles.shareText}>Share:</Text>
             <FlatList

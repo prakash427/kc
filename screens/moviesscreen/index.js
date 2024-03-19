@@ -309,7 +309,7 @@ const MoviesdisplayScreen = ({ updateStreaming,updateDialogue,updateMovies,updat
                 <TouchableOpacity onPress={handleClick}>
                     <FontAwesome5 name='arrow-left' size={24} color='#ffffff' />
                 </TouchableOpacity>
-                <Text style={styles.streamingtext}>Chiru's Dialogues</Text>
+                <Text style={styles.streamingtext}>Movies</Text>
             </View>
             <View style={{ height: 200 }}>
                 <Slides style={{ margin: 0 }} />

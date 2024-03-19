@@ -16,17 +16,34 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         gap: 100
     },
+    langbtn: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 100,
+        width: 100,
+        backgroundColor: '#fff',
+        borderRadius: 50,
+        marginBottom: 20
+    },
+    flagContainer: {
+        alignItems: 'center'
+    },
+    langname: {
+        color: '#000',
+        fontWeight: 'bold',
+        fontSize: 16
+    },
     text: {
-        color: '#F16623',
+        color: '#000000',
         fontWeight: '500',
         fontSize: 25
     },
-    imagecontainer: {
+    langcontainer: {
         flexDirection: 'row',
         gap: 70
     },
     button: {
-        backgroundColor: '#F16623',
+        backgroundColor: '#000000',
         width: 315,
         height: 52,
         alignItems: 'center',
@@ -35,7 +52,8 @@ const styles = StyleSheet.create({
     },
     nexttext: {
         fontWeight: '500',
-        fontSize: 16
+        fontSize: 16,
+        color: '#fff'
     }
 })
 

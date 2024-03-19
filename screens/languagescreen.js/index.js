@@ -10,19 +10,23 @@ const LanguageScreen = ({navigation}) => {
             <Image source={require('../../assets/mega21.png')} style={styles.image}></Image>
             <LinearGradient
                 style={styles.container}
-                colors={['#290334', '#845257']}
-                start={{ x: 1, y: 0 }}
-                end={{ x: 1, y: 1 }}
+                colors={['#E1F6FF', '#91E0FF']}
             >
                 <View style={styles.content}>
                     <Text style={styles.text}>Select Language</Text>
-                    <View style={styles.imagecontainer}>
-                        <TouchableOpacity>
-                            <Image source={require('../../assets/English.png')}></Image>
+                    <View style={styles.langcontainer}>
+                      <View style={styles.flagContainer}>
+                        <TouchableOpacity style={styles.langbtn}>
+                            <Image source={require('../../assets/United_States.png')} ></Image>
                         </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={require('../../assets/Telugu.png')}></Image>
+                        <Text style={styles.langname}>English</Text>
+                      </View>
+                      <View style={styles.flagContainer}>
+                        <TouchableOpacity style={styles.langbtn}>
+                            <Image source={require('../../assets/icon_India.png')} ></Image>
                         </TouchableOpacity>
+                        <Text style={styles.langname}>Telugu</Text>
+                      </View>
                     </View>
                     <TouchableOpacity style={styles.button} onPress={()=>{navigation.navigate('StackK')}}>
                         <Text style={styles.nexttext}>NEXT</Text>

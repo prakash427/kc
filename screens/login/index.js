@@ -24,16 +24,16 @@ const Login = ({navigation}) => {
       <StatusBar hidden/>
       <Image source={require('../../assets/chiru_login.png')} style={styles.login_image} resizeMode='cover'/>
       <LinearGradient 
-        colors={['#290334', '#845257']}
+        colors={['#E1F6FF', '#91E0FF']}
         style={styles.login_container}
       >
       <Text style={styles.chiru_text}>Chiru Universe</Text>
       <View style={styles.input_container}>
-      <Icon name="mail-outline" size={24} color="#fff" style={styles.icon} />
+      <Icon name="mail-outline" size={24} color="#000" style={styles.icon} />
       <TextInput
         style={styles.input}
         placeholder='Email'
-        placeholderTextColor='#fff'
+        placeholderTextColor='#000'
         onChangeText={(text) => setEmail(text)}
         value={email}
         keyboardType="email-address"
@@ -41,11 +41,11 @@ const Login = ({navigation}) => {
       />
     </View>
     <View style={styles.input_container}>
-      <Icon name="lock-outline" size={24} color="#fff" style={styles.icon} />
+      <Icon name="lock-outline" size={24} color="#000" style={styles.icon} />
       <TextInput
         style={styles.input}
         placeholder='Password'
-        placeholderTextColor='#fff'
+        placeholderTextColor='#000'
         onChangeText={(text) => setPassword(text)}
         value={password}
         secureTextEntry={!showPassword}
@@ -54,7 +54,7 @@ const Login = ({navigation}) => {
         <Ionicons
           name={showPassword ? 'eye-off-outline' : 'eye-outline'}
           size={24}
-          color="#fff"
+          color="#000"
         />
       </TouchableOpacity>
     </View>
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     padding: 40
   },
   chiru_text: {
-    color: '#f16623',
+    color: '#000000',
     fontSize: 25,
     fontFamily: 'Poppins',
     fontWeight: 'bold',
@@ -125,21 +125,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 20,
-    borderColor: '#fff',
+    borderColor: '#000',
     borderBottomWidth: 1
   },
   icon: {
     marginRight: 10,
   },
   forgot_password_text: {
-    color: '#fff',
+    color: '#000',
     fontSize: 14,
     marginTop: 20
   },
   login_btn: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f16623',
+    backgroundColor: '#000000',
     width: '70%',
     height: 45,
     marginTop: 30,
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
   or_text: {
-    color: '#fff',
+    color: '#000',
     fontSize: 14,
     marginBottom: 10
   },
@@ -173,11 +173,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   dont_text: {
-    color: '#fff',
+    color: '#000',
     fontSize: 14,
   },
   signup_text: {
-    color: '#f16623',
+    color: '#000',
+    fontWeight: 'bold'
   },
   signup_btn: {
     marginLeft: 5

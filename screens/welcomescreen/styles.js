@@ -1,62 +1,39 @@
 import { StyleSheet } from "react-native";
+import { Dimensions } from "react-native";
+
+const dwidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginBottom: 16,
+    bgimage: {
+       width: dwidth,
+       resizeMode: 'cover',
+       height: '70%'
     },
-    image: {
-        flex: 1,
-        resizeMode: 'contain',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    imageContainer: {
-        alignSelf: 'center',
-        marginTop: '45%',
-        overflow: 'hidden',
-        borderRadius: 200,
-    },
-    image1: {
-        width: 250,
-        height: 250,
-    },
-    textContainer: {
-        top: 30,
-    },
-    text: {
+    welcometext: {
         fontFamily:'Poppins',
-        color: '#ffffff',
-        fontWeight: '500',
-        fontSize: 50,
-        lineHeight: 56,
+        color: '#000000',
+        fontWeight: 'bold',
+        fontSize: 30,
         textAlign: 'center',
-        padding: 15
+        marginVertical: 30,
+        lineHeight: 45
     },
     button: {
-        backgroundColor: 'transparent',
+        backgroundColor: '#000000',
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',
         height: 50,
         width: 210,
-        margin: 20,
-        borderRadius: 10
-    },
-    buttonContent: {
-        height: '100%',
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
+        borderRadius: 10,
     },
     buttontext: {
         alignSelf: 'center',
         justifyContent: 'center',
-        fontSize: 14,
+        fontSize: 16,
         color: '#ffffff',
     }
 });
