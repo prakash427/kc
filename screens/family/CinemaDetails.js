@@ -4,8 +4,9 @@ import LinearGradient from 'react-native-linear-gradient';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { AirbnbRating, Rating } from 'react-native-ratings';
+import { useNavigation } from '@react-navigation/native';
 
-const CinemaDetails = () => {
+const CinemaDetails = ({navigation}) => {
 
 
   return (
@@ -66,7 +67,7 @@ const CinemaDetails = () => {
           <AirbnbRating showRating={false} size={20} unSelectedColor={'rgba(255, 221, 85, 0.5)'} />
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <TouchableOpacity style={styles.submitButton} >
+          <TouchableOpacity style={styles.submitButton} onPress={()=>{navigation.navigate('FamilyDetails')}}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
               <MaterialIcons name="keyboard-arrow-left" size={22} color="black" />
               <Text style={styles.submitButtonText}>Back</Text>

@@ -34,7 +34,7 @@ const Family = ({navigation}) => {
       <View>
         <View style={styles.container}>
           <Text style={styles.know_text}>Know your <Text style={styles.mega_text}>{' '}Mega{' '}</Text> Family</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('FamilyDetails')}>
             <Image source={require('../../assets/family_chiru.png')} resizeMode='cover' />
           </TouchableOpacity>
           <Text style={styles.chiru_text}>Konidela Chiranjeevi</Text>

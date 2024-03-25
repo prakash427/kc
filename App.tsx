@@ -13,6 +13,7 @@ import MoviesdisplayScreen from './screens/moviesscreen/index.js';
 import NewsScreen from './screens/news/index.js';
 import EventScreen from './screens/eventsscreen/index.js';
 import Newspage from './screens/newspage/index.js';
+import AudioPlayer from './screens/audio/index.js';
 
 const App = () => {
   return (

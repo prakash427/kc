@@ -15,6 +15,7 @@ import NewsScreen from "../news";
 import EventScreen from "../eventsscreen";
 import GalleryScreen from "../gallery";
 import CustomModal from "../../components/CustomModal";
+import CustomAudio from "../../components/customAudio";
 import Newspage from "../newspage";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
@@ -22,6 +23,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 const width = Dimensions.get('window').width;
 const Homescreen = () => {
     const [visible, setVisible ] = useState(false);
+    const [audio, setAudio] = useState(false);
     const [streaming, setStreaming] = useState(false)
     const[dialogues, setDialogues] = useState(false)
     const[moviesupdate,setMoviesupdate] = useState(false)
@@ -167,7 +169,7 @@ const Homescreen = () => {
                                         </View>
                                     </View>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.st}>
+                                <TouchableOpacity onPress={() => setAudio(true)} style={styles.st}>
                                     <View>
                                         <Text style={styles.messagetype}>Audio</Text>
                                         <View style={{ flexDirection: 'row', gap: 4 }}>
@@ -193,6 +195,7 @@ const Homescreen = () => {
                                 </TouchableOpacity>
                             </View>
                             <CustomModal visible={visible} onClose={()=> setVisible(false)}/>
+                            <CustomAudio visible={audio} onClose={()=> setAudio(false)}/>
                             <View style={styles.message}>
                                 <Text style={styles.messagetext}>Live Stream</Text>
                                 <LinearGradient

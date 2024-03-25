@@ -5,6 +5,7 @@ import {
   StyleSheet,
   View,
   Text,
+  TouchableOpacity,
   LayoutChangeEvent,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -29,6 +30,7 @@ import Fans from '../fans';
 import { CharityStack } from './CharityStack';
 import Media from '../media';
 import { FamilyStack } from './FamilyStack';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import StreamingRecords from '../streamingrecordsscreen';
 
 
@@ -98,7 +100,13 @@ const StackK = ({ route }) => {
               title: 'Family',
               headerTitleStyle: { color: '#fff' },
               headerTitleAlign: 'center',
-              headerBackgroundContainerStyle: { backgroundColor: '##E1F6FF' }
+              headerBackgroundContainerStyle: { backgroundColor: '##E1F6FF' },
+            //   headerLeft: () => (
+            //     <TouchableOpacity>
+            //     <FontAwesome5 name='arrow-left' size={24} color='#ffffff'/>
+            // </TouchableOpacity>
+            // ),
+            
             }}
           />
         </Tab.Navigator>
@@ -258,7 +266,7 @@ const styles = StyleSheet.create({
     height: 40,
     left: 10,
     width: 40,
-    backgroundColor: '#005575',
+    backgroundColor: '#1a9bf0',
     bottom: 50,
   },
   iconContainer: {
